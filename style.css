@@ -1,0 +1,28 @@
+*{
+  font-family: 'Muli', sans-serif;
+  margin: auto;
+  padding: auto;
+}
+
+html{
+  font-size: 5px;
+}
+
+
+#navbar{
+  position: relative;
+  background-color: #EB5757;
+  color: white;
+}
+
+#navbar h2 {
+  font-weight: 700;
+}
+
+#title h1{
+  position: relative;
+  margin-top: 5%;
+  color: black;
+  font-weight: 800;
+  font-size: 5rem;
+}
