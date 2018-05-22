@@ -8,15 +8,56 @@ html{
   font-size: 5px;
 }
 
-
 #navbar{
   position: relative;
   background-color: #EB5757;
   color: white;
 }
 
+.row_nav{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.row_title{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5em;
+  width: 100%;
+}
+
+.row_songList{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 1em;
+  border-top: 2px solid black;
+}
+
+.hamb{
+  width: 2em;
+  margin-right: 0em;
+  margin-left: 0em;
+  padding-top: 7px;
+
+}
+
+.app_name{
+  width: 5em;
+  margin-left: 3em;
+
+}
+
 #navbar h2 {
   font-weight: 700;
+}
+
+.line{
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
 }
 
 #title h1{
@@ -25,4 +66,40 @@ html{
   color: black;
   font-weight: 800;
   font-size: 5rem;
+}
+
+.blank{
+  width: 2em;
+  margin-right: 0em;
+  margin-left: 0em;
+  padding-top: 7px;
+}
+
+.title{
+  width: 5em;
+  margin-left: 3em;
+  margin-top: 6em;
+}
+
+.song_title{
+  width: 5em;
+  margin-left: 3em;
+}
+
+.song_title h3{
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+.song_artist{
+    width: 5em;
+    margin-left: 3em;
+    margin-top: 2em;
+}
+.song_artist h4{
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
 }
