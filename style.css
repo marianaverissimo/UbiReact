@@ -82,13 +82,11 @@ html{
 }
 
 .song_title{
-  width: 5em;
+  width: 15em;
   margin-left: 3em;
-}
-
-.song_title h3{
   color: black;
   font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
   font-weight: 400;
   padding-top: 10px;
 }
