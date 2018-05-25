@@ -101,3 +101,14 @@ html{
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
 }
+
+.row_moreDetails{
+  display: none;
+}
+
+.song_list:hover .row_moreDetails{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 2em;
+}

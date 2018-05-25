@@ -35,12 +35,16 @@ const title = (
 function SongListFunction(songList) {
   console.log(songList);
   const songListRender = songList.map((song) =>
-  <div className="container">
+  <div className="container song_list">
       <div className="row_songList">
         <div className="col-1 blank"></div>
-        <div className="col-8 song_title">{song['title']}</div>
-        <div className="col-3 song_artist">{song['artist']}</div>
-
+          <div className="col-8 song_title">{song['title']}</div>
+          <div className="col-3 song_artist">{song['artist']}</div>
+      </div>
+      <div className="row_moreDetails">
+          <div className="col-5 song_year"> {song['year']} </div>
+          <div className="col-3 song_url"> <a href= "{song['webUrl']}"> Lyrics </a> </div>
+          <div className="col-4 song_img"> {song['imgUrl']} </div>
       </div>
     </div>
   );
@@ -48,7 +52,6 @@ function SongListFunction(songList) {
     <ul>{songListRender}</ul>
   );
 }
-
 
 const song_one = (
   <Request
@@ -70,10 +73,6 @@ const song_one = (
         }
         </Request>
 );
-
-
-
-
 
 
 ReactDOM.render( navbar, document.getElementById("navbar"));
