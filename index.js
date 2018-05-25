@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Request from 'react-http-request';
 
+var songList;
+
 const navbar = (
     <nav className="container">
       <div className="row_nav">
@@ -30,6 +32,24 @@ const title = (
 );
 
 
+function SongListFunction(songList) {
+  console.log(songList);
+  const songListRender = songList.map((song) =>
+  <div className="container">
+      <div className="row_songList">
+        <div className="col-1 blank"></div>
+        <div className="col-8 song_title">{song['title']}</div>
+        <div className="col-3 song_artist">{song['artist']}</div>
+
+      </div>
+    </div>
+  );
+  return (
+    <ul>{songListRender}</ul>
+  );
+}
+
+
 const song_one = (
   <Request
         url='https://songs-api-ubiwhere.now.sh/api/songs'
@@ -41,29 +61,21 @@ const song_one = (
           ({error, result, loading}) => {
             if (loading) {
               return <div>loading...</div>;
-            } if(result) {
-              var data = JSON.parse(result.text);
-              console.log(data[0].title);
-              return data[0].title;
+
+            } else {
+              console.log(result.body);
+              return <div>{ SongListFunction(result.body)}</div>;
             }
           }
         }
         </Request>
 );
 
-const song_list = (
-  <div className="container">
-    <div className="row_songList">
 
-      <div className="col-1 blank"></div>
-      <div className="col-9 song_title"> </div>
-      <div className="col-2 song_artist"></div>
 
-    </div>
-  </div>
-);
+
+
 
 ReactDOM.render( navbar, document.getElementById("navbar"));
 ReactDOM.render( title, document.getElementById("title"));
-ReactDOM.render( song_list, document.getElementById("song_list"));
 ReactDOM.render( song_one, document.getElementById("song_one"));
